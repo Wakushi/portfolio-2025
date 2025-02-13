@@ -60,7 +60,7 @@ export default function ProjectCard({
 
   return (
     <div
-      className={`relative max-h-fit h-full flex-grow basis-[250px] flex flex-col p-4 border ${colors.border} ${colors.hoverBorder} rounded-xl gap-1 overflow-hidden transition-all duration-300 hover:scale-105 group/card shadow-lg hover:shadow-xl ${colors.hoverShadow}`}
+      className={`relative max-h-fit sm:max-h-none flex-grow basis-[200px] flex flex-col p-4 border ${colors.border} ${colors.hoverBorder} rounded-xl gap-1 overflow-hidden transition-all duration-300 hover:scale-105 group/card shadow-lg hover:shadow-xl ${colors.hoverShadow}`}
     >
       <div className="flex items-center justify-between gap-2">
         <p className="text-[0.8rem] transform transition-transform duration-300 group-hover/card:translate-y-0.5">
@@ -78,7 +78,7 @@ export default function ProjectCard({
       <h3 className="text-zinc-50/90 text-sm font-normal transform transition-transform duration-300 group-hover/card:translate-y-0.5">
         {name}
       </h3>
-      <p className="text-zinc-50/70 text-[0.8rem] transform transition-transform duration-300 group-hover/card:translate-y-0.5">
+      <p className="text-zinc-50/70 text-[0.8rem] mt-auto transform transition-transform duration-300 group-hover/card:translate-y-0.5">
         {stack}
       </p>
       <div
