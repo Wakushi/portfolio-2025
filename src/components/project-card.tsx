@@ -1,3 +1,4 @@
+import { FaTrophy } from "react-icons/fa6"
 import { MdArrowOutward } from "react-icons/md"
 
 type ColorVariant = "rose" | "blue" | "teal" | "violet" | "slate" | "yellow"
@@ -47,6 +48,7 @@ type ProjectCardProps = {
   stack: string
   url: string
   colorVariant: ColorVariant
+  hackWon?: boolean
 }
 
 export default function ProjectCard({
@@ -55,6 +57,7 @@ export default function ProjectCard({
   stack,
   url,
   colorVariant,
+  hackWon = false,
 }: ProjectCardProps) {
   const colors = colorMap[colorVariant]
 
@@ -62,7 +65,7 @@ export default function ProjectCard({
     <div
       className={`relative max-h-fit sm:max-h-none flex-grow basis-[200px] flex flex-col p-4 border ${colors.border} ${colors.hoverBorder} rounded-xl gap-1 overflow-hidden transition-all duration-300 hover:scale-105 group/card shadow-lg hover:shadow-xl ${colors.hoverShadow}`}
     >
-      <div className="flex items-center justify-between gap-2">
+      <div className="relative flex items-center justify-between gap-2">
         <p className="text-[0.8rem] transform transition-transform duration-300 group-hover/card:translate-y-0.5">
           {description}
         </p>
@@ -74,6 +77,10 @@ export default function ProjectCard({
         >
           <MdArrowOutward className="text-md text-zinc-50/30 group-hover:text-zinc-50/70 transition-all duration-300" />
         </a>
+
+        {hackWon && (
+          <FaTrophy className="absolute right-[5px] top-10 text-amber-300/70" />
+        )}
       </div>
       <h3 className="text-zinc-50/90 text-sm font-normal transform transition-transform duration-300 group-hover/card:translate-y-0.5">
         {name}

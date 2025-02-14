@@ -87,11 +87,12 @@ export default function App() {
         <SectionTitle title="hacks" />
         <div className="flex flex-col sm:flex-row flex-wrap gap-4">
           <ProjectCard
-            name="Devmentor - Chainlink Constellation Hackathon"
+            name="Devmentor - Chainlink Constellation"
             description="Help Web3 developers learn by connecting mentors with mentees"
             colorVariant="blue"
             url="https://devpost.com/software/devmentor"
             stack="Solidity | Foundry | NextJS | Chainlink"
+            hackWon
           />
           <ProjectCard
             name="Whal-E - ETHGlobal Agentic"
@@ -99,9 +100,10 @@ export default function App() {
             colorVariant="slate"
             url="https://ethglobal.com/showcase/whal-e-awzsa"
             stack="Solidity | NestJS | TheGraph | LangChain"
+            hackWon
           />
           <ProjectCard
-            name="Mosaic - Chainlink Block Magic Hackathon"
+            name="Mosaic - Chainlink Block Magic"
             description="Tokenize and fractionalize physical artwork using oracle networks"
             colorVariant="violet"
             url="https://devpost.com/software/mosaic-zy3lu2"
